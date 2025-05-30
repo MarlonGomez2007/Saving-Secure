@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #fecd02;
+    background-color: #1f2029;
+    overflow: hidden;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+a:hover {
+    text-decoration: none;
+}
+.link {
+    color: #fecd02;
+}
+.link:hover {
+    color: #c4c3ca;
+}
+p {
+    font-weight: 500;
+    font-size: 14px;
+}
+h4 {
+    font-weight: 600;
+}
+.section {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+.full-height {
+    min-height: 100vh;
+}
+.form-style {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #fecd02;
+    border-radius: 5px;
+    background: transparent;
+    color: #fecd02;
+    font-size: 14px;
+}
+.form-style:focus {
+    outline: none;
+    border-color: #fecd02;
+}
+.btn {
+    background: #fecd02;
+    color: #1f2029;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #f2c100;
+}
+button {
+    width: 10em;
+    position: relative;
+    height: 2.0em;
+    border: 3px ridge #f0b700;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: transparent;
+    transition: 0.5s;
+    transform-origin: center;
+    animation: pulse 1s infinite;
+  
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: transparent;
+    transition: 0.5s;
+    animation: pulse 1s infinite;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #f0b700;
+    animation: pulse 1s infinite;
+  }
+  
+  
+  ::-webkit-scrollbar {
+    width: 16px; 
+    height: 16px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #fecd02; 
+    border-radius: 8px;
+    border: 3px solid black; 
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: black; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #f0b700; 
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  }
+  
+  
+  ::-webkit-scrollbar-track:hover {
+    background-color: #333;
+  }
+
+  
+
+body {
+        font-family: sans-serif;
+        overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 32px;
+}
+
+@keyframes anim-fade-in { from { opacity: 0; } to { opacity: 1 } }
+
+@keyframes anim-up { 
+	from { opacity: 0; transform: translateY(100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+} 
+
+@keyframes anim-down { 
+	from { opacity: 0; transform: translateY(-100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+} 
+
+@keyframes anim-left { 
+	from { opacity: 0; transform: translateX(100px); } 
+	to { opacity: 1; transform: translateX(0px); }  
+} 
+
+@keyframes anim-right { 
+	from { opacity: 0; transform: translateX(-100px); } 
+	to { opacity: 1; transform: translateX(0px); }  
+} 
+
+.anim-up, .anim-down, .anim-left, .anim-right, .anim-fade-in {
+	animation-duration: 0.2s; 
+	animation-delay: 0.2s; 
+	animation-fill-mode: both; 
+}
+
+.anim-up { animation-name: anim-up; }
+.anim-down { animation-name: anim-down; }
+.anim-left { animation-name: anim-left; }
+.anim-right { animation-name: anim-right; }
+.anim-fade-in { animation-name: anim-fade-in; }
+
+.anim-pause-2 { animation-delay: 1s; } 
+.anim-pause-3 { animation-delay: 1.5s; } 
+.anim-pause-4 { animation-delay: 2s; } 
+.anim-pause-5 { animation-delay: 2.5s; }
+
+.paused * { 
+	animation-play-state: paused;
+}
+
+
+

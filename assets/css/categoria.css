@@ -1,0 +1,569 @@
+
+        
+
+        .form-style3, select.form-style3 {
+            width: 400px;
+            height: 45px;
+            margin-bottom: 30px;
+            border: 2px solid #fecd02;
+            border-radius: 25px;
+            background-color: #1a1b26;
+            color: white;
+            font-size: 1em;
+            padding: 0 15px;
+            transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+  
+        .form-style3::placeholder, select.form-style3::placeholder {
+            color: #cccccc;
+            font-style: italic;
+        }
+
+        
+        .form-style3:hover, select.form-style3:hover {
+            border-color: #ffc800;
+            box-shadow: 0 0 10px rgba(254, 205, 2, 0.5);
+        }
+
+  
+        .form-style3:focus, select.form-style3:focus {
+            border-color: #fecd02;
+            background-color: #252636;
+            outline: none;
+            box-shadow: 0 0 15px rgba(254, 205, 2, 0.7);
+        }
+
+        
+        select.form-style3 {
+            appearance: none; 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%23fecd02"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+            cursor: pointer;
+        }
+
+       
+        select.form-style3 option {
+            background-color: #1a1b26;
+            color: white;
+            padding: 10px;
+        }
+
+     
+        select.form-style3 option {
+            background-color: #252636; 
+            color: #ffffff; 
+            padding: 12px;
+            font-size: 1em;
+            border-bottom: 1px solid #fecd02; 
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        
+        select.form-style3 option:hover {
+            background-color: #fecd02; 
+            color: #252636; 
+        }
+
+        
+        select.form-style3 option:checked {
+            background-color: #ffc800;
+            color: #1a1b26;
+            font-weight: bold; 
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 0px;
+        }
+
+        .navbar-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .welcome-message {
+            color: white;
+            margin-left: 20px;
+            font-size: 1.2em;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+       
+
+       
+
+        .caja {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2b2d36;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .caja label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fecd02;
+            font-weight: bold;
+        }
+
+
+        .dashboard-main {
+            padding: 20px;
+        }
+
+        
+.header {
+    height: 70px;
+    border-bottom: 1px solid #fecd02;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1b26;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.site-title {
+    color: #fecd02;
+    font-size: 20px;
+    margin: 0;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-message {
+    color: #fecd02;
+    font-size: 1.1em;
+    margin-right: 20px;
+}
+
+
+.menu {
+    padding: 15px 20px;
+    background-color: #1a1b26;
+}
+
+.menu ol {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+}
+.nombre {
+    color: white;
+}
+
+
+/* Variables para colores y estilos consistentes */
+:root {
+  --primary-yellow: #fecd02;
+  --glow-yellow: #ffc800;
+  --dark-bg: #1a1b26;
+  --darker-bg: #15161f;
+  --lighter-bg: #252636;
+  --text-color: #ffffff;
+  --placeholder-color: #cccccc;
+  --transition-speed: 0.3s;
+  --border-radius: 25px;
+}
+
+/* Contenedor del formulario con un efecto elegante */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #1e2132, #18192a);
+  border-radius: var(--border-radius);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  border: 3px solid transparent;
+  background: linear-gradient(90deg, var(--primary-yellow), var(--glow-yellow)) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: movingBorder 3s linear infinite;
+}
+
+@keyframes movingBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Etiquetas estilizadas */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-yellow);
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding-left: 12px;
+  transition: transform var(--transition-speed) ease;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group:hover label {
+  transform: translateX(5px);
+}
+
+/* Estilos para inputs y selects */
+.form-style3, select.form-style3 {
+  width: 100%;
+  height: 50px;
+  padding: 12px 18px;
+  border: 2px solid var(--primary-yellow);
+  border-radius: var(--border-radius);
+  background-color: var(--dark-bg);
+  color: var(--text-color);
+  font-size: 1em;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-style3::placeholder {
+  color: var(--placeholder-color);
+  font-style: italic;
+  transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.form-style3:hover, select.form-style3:hover {
+  border-color: var(--glow-yellow);
+  box-shadow: 0 0 15px rgba(254, 205, 2, 0.4);
+  transform: translateY(-2px);
+}
+
+.form-style3:hover::placeholder {
+  transform: translateX(5px);
+}
+
+.form-style3:focus, select.form-style3:focus {
+  border-color: var(--glow-yellow);
+  background-color: var(--lighter-bg);
+  outline: none;
+  box-shadow: 0 0 20px rgba(254, 205, 2, 0.5);
+}
+
+select.form-style3 {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23fecd02"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 45px;
+  cursor: pointer;
+}
+
+select.form-style3 option:hover {
+  background-color: var(--glow-yellow);
+  color: var(--darker-bg);
+}
+
+/* Caja con efecto moderno */
+.caja {
+  background-color: var(--darker-bg);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.caja::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background: linear-gradient(90deg, var(--primary-yellow), var(--glow-yellow)) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: movingBorder 3s linear infinite;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-style3, select.form-style3 {
+    height: 45px;
+    font-size: 0.95em;
+  }
+
+  button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  label {
+    font-size: 0.95em;
+  }
+}
+
+.tabla3 {
+    border-collapse: collapse;
+    width: 40%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    background-color: #2b2d36;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla3 th {
+    padding: 15px;
+    text-align: center;
+    background-color: #fecd02;
+    color: #1a1b26;
+    font-weight: bold;
+    border-bottom: 3px solid #1a1b26;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabla3 td {
+    padding: 12px;
+    text-align: center;
+    background-color: #2b2d36;
+    color: white;
+    border-bottom: 1px solid #1a1b26;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tabla3 tr:nth-child(even) td {
+    background-color: #1a1b26;
+}
+
+.tabla3 caption {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #fecd02;
+    font-family: 'Impact', sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.tabla-container {
+    max-width: 30%;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* Estilos para botones de sugerencias */
+.btn-sugerencia {
+    background-color: #1a1b26;
+    color: #fecd02;
+    border: 2px solid #fecd02;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-sugerencia:hover {
+    background-color: #fecd02;
+    color: #1a1b26;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(254, 205, 2, 0.3);
+}
+
+.btn-sugerencia:active {
+    transform: translateY(0);
+}
+
+.sugerencias-categorias {
+    background-color: rgba(26, 27, 38, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(254, 205, 2, 0.2);
+}
+
+.sugerencias-categorias h3 {
+    color: #fecd02;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.categorias-sugeridas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+/* Contenedor principal con efecto de sombra */
+.paginacion-container {
+  background: linear-gradient(145deg, #1e2130, #171b26);
+  border-radius: 15px;
+  padding: 15px 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 
+              0 0 0 1px rgba(255, 215, 0, 0.1),
+              inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo en el borde */
+.paginacion-container:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, #FFD700, transparent, #FFD700, transparent);
+  background-size: 400%;
+  border-radius: 16px;
+  opacity: 0.3;
+  animation: glowing 20s linear infinite;
+}
+
+/* Botones de paginación */
+.paginacion .btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover de botones */
+.paginacion .btn:hover {
+  background: rgba(255, 215, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Botón activo */
+.paginacion .btn.activo {
+  background: #FFD700;
+  color: #161a23;
+  font-weight: 700;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Botones de anterior y siguiente */
+.paginacion .btn.nav {
+  background: rgba(255, 215, 0, 0.9);
+  color: #161a23;
+  font-weight: 700;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.paginacion .btn.nav:hover {
+  transform: scale(1.05);
+}
+
+/* Efecto hover para botones de navegación */
+.paginacion .btn.nav:hover {
+  background: #FFD700;
+  transform: translateY(-2px) scale(1.03);
+}
+
+
+
+/* Separador de páginas */
+.paginacion .separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+}
+
+/* Contador de páginas */
+.paginacion .page-counter {
+  position: absolute;
+  bottom: -25px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(22, 26, 35, 0.8);
+  padding: 3px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

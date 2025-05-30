@@ -1,0 +1,302 @@
+/* Estilos base para todos los dispositivos */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1b26; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilos para el header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1b26; /* Color de fondo del header */
+    color: #fecd02; /* Color del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 80px; /* Aumentamos el tamaño del logo */
+}
+
+.header .site-title {
+    margin-left: 15px;
+    font-size: 32px; /* Aumentamos el tamaño del título */
+    font-weight: bold;
+    color: #fecd02;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.welcome-message {
+    font-size: 24px; /* Aumentamos el tamaño del mensaje de bienvenida */
+    color: #fecd02;
+}
+
+/* Estilos para el panel de ingresar gastos */
+.form-container {
+    max-width: 700px; /* Aumentamos el ancho del panel */
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #2a2b3a; /* Color de fondo del panel */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container .input-group {
+    margin-bottom: 25px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fecd02; /* Color del texto */
+    font-size: 20px; /* Aumentamos el tamaño de las etiquetas */
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #fecd02;
+    border-radius: 8px;
+    background-color: #1a1b26;
+    color: #fff;
+    font-size: 18px; /* Aumentamos el tamaño del texto */
+}
+
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #fecd02;
+    color: #1a1b26;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px; /* Aumentamos el tamaño del botón */
+    font-weight: bold;
+}
+
+.form-container button:hover {
+    background-color: #e6b800;
+}
+
+/* Estilos para la tabla de gastos */
+.tabla3 {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+.tabla3 th,
+.tabla3 td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #fecd02;
+    font-size: 18px; /* Aumentamos el tamaño del texto */
+}
+
+.tabla3 th {
+    background-color: #2a2b3a;
+    color: #fecd02;
+}
+
+.tabla3 td {
+    background-color: #1a1b26;
+}
+
+/* Estilos para los gráficos */
+.grafico-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.grafico-circular,
+.grafico-barras {
+    width: 48%;
+    background-color: #2a2b3a;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la paginación */
+.paginacion-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.paginacion-container .btn {
+    margin: 0 10px;
+    padding: 12px 18px;
+    background-color: #fecd02;
+    color: #1a1b26;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; /* Aumentamos el tamaño del texto */
+}
+
+.paginacion-container .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas grandes (desktops) */
+@media (min-width: 1201px) {
+    .header {
+        padding: 25px 40px;
+    }
+
+    .header .logo img {
+        height: 90px;
+    }
+
+    .header .site-title {
+        font-size: 36px;
+    }
+
+    .welcome-message {
+        font-size: 28px;
+    }
+
+    .form-container {
+        max-width: 800px;
+        padding: 40px;
+    }
+
+    .form-container label {
+        font-size: 22px;
+    }
+
+    .form-container input,
+    .form-container select {
+        padding: 18px;
+        font-size: 20px;
+    }
+
+    .form-container button {
+        padding: 18px;
+        font-size: 22px;
+    }
+
+    .tabla3 th,
+    .tabla3 td {
+        padding: 18px;
+        font-size: 20px;
+    }
+}
+
+/* Tablets y móviles grandes */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .header {
+        padding: 20px;
+    }
+
+    .header .logo img {
+        height: 70px;
+    }
+
+    .header .site-title {
+        font-size: 28px;
+    }
+
+    .welcome-message {
+        font-size: 22px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        padding: 25px;
+    }
+
+    .form-container label {
+        font-size: 18px;
+    }
+
+    .form-container input,
+    .form-container select {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .form-container button {
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .tabla3 th,
+    .tabla3 td {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .logo img {
+        height: 60px;
+    }
+
+    .header .site-title {
+        font-size: 24px;
+        margin-left: 0;
+    }
+
+    .welcome-message {
+        font-size: 18px;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-container label {
+        font-size: 16px;
+    }
+
+    .form-container input,
+    .form-container select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .form-container button {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .tabla3 th,
+    .tabla3 td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .paginacion-container .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

@@ -317,146 +317,153 @@ const ChatBot = () => {
               scale: 0.9,
               transition: { duration: 0.2 }
             }}
-            className="fixed bottom-24 right-6 w-96 h-[600px] bg-white/95 rounded-2xl shadow-2xl overflow-hidden z-[9998] flex flex-col"
+            className="fixed bottom-24 right-6 md:w-96 w-[calc(100%-3rem)] max-w-[400px] h-[600px] max-h-[80vh] rounded-2xl shadow-2xl overflow-hidden z-[9998] flex flex-col"
+            style={{ background: 'rgba(255, 255, 255, 0.92)' }}
           >
-            {/* Contenedor de partículas */}
-            <div className="absolute inset-0 z-[1]">
-              <ChatBotParticles />
-            </div>
-            
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b bg-white/90 relative z-[2]">
-              <div className="flex items-center space-x-3">
-                <motion.div 
-                  className="w-8 h-8 relative"
-                >
-                  <img src="/assets/img/logo.png" alt="Saving Secure Logo" className="w-full h-full object-contain" />
-                  <motion.div
-                    className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full"
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [1, 0.8, 1]
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                </motion.div>
-                <div>
-                  <h3 className="text-gray-900 font-semibold">Saving Secure</h3>
-                  <p className="text-yellow-400 text-xs font-medium">Asesor Financiero Virtual</p>
-                </div>
-              </div>
-              <motion.button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full"
-                whileHover={{ rotate: 90 }}
-                transition={{ duration: 0.2 }}
-              >
-                <X size={20} />
-              </motion.button>
-            </div>
-
-            {/* Chat Content */}
-            <div
-              ref={chatContentRef}
-              className="flex-1 overflow-y-auto p-3 md:p-4 space-y-3 md:space-y-4 relative z-[2] bg-white/90"
-            >
-              {messages.map((message, index) => (
-                <motion.div
-                  key={index}
-                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  variants={messageVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                >
-                  <div
-                    className={`max-w-[80%] p-3 rounded-2xl ${
-                      message.type === 'user'
-                        ? 'bg-[#fecd02] text-gray-900'
-                        : 'bg-[rgb(31,32,41)] text-white'
-                    }`}
-                  >
-                    {message.content}
-                  </div>
-                </motion.div>
-              ))}
-              {isTyping && (
-                <div className="flex justify-start">
-                  <div className="bg-[#1E1E1E] p-4 rounded-2xl">
-                    <div className="flex space-x-2">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input Form */}
-            <form onSubmit={handleSubmit} className="p-3 md:p-4 border-t bg-white/90 relative z-[2]">
-              <div className="relative flex items-center">
-                {/* Campo de entrada con efecto neomórfico */}
-                <div className="relative flex-1 mr-2 md:mr-3">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#fecd02]/20 to-yellow-500/20 rounded-xl blur-md transform scale-105" />
-                  <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-xl shadow-inner" />
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Escriba su mensaje..."
-                    className="relative w-full bg-transparent text-gray-900 rounded-xl px-4 md:px-6 py-3 md:py-4 focus:outline-none placeholder:text-gray-400 text-sm md:text-base"
-                  />
-                  
-                  {/* Efecto de onda al escribir */}
-                  <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#fecd02] via-yellow-500 to-[#fecd02]"
-                    initial={{ scaleX: 0 }}
-                    animate={{ 
-                      scaleX: inputValue ? [0, 1, 1] : 0,
-                      x: inputValue ? ['0%', '100%', '0%'] : '0%'
-                    }}
-                    transition={{ 
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                </div>
-
-                {/* Botón de enviar */}
-                <motion.button
-                  type="submit"
-                  disabled={!inputValue.trim()}
-                  className="relative group"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className={`
-                    relative p-3 rounded-full
-                    ${!inputValue.trim()
-                      ? 'bg-gray-100'
-                      : 'bg-gradient-to-r from-[#fecd02] to-[#fecd02] shadow-md'
-                    }
-                    transition-all duration-300
-                  `}>
-                    <Send
-                      size={22}
-                      className={`transition-all duration-300 ${
-                        inputValue.trim()
-                          ? 'text-white stroke-[2]'
-                          : 'text-gray-400'
-                      }`}
+            {/* Content container */}
+            <div className="relative flex flex-col h-full" style={{ zIndex: 2 }}>
+              {/* Header */}
+              <div className="flex items-center justify-between p-3 md:p-4 border-b bg-white/70">
+                <div className="flex items-center space-x-2 md:space-x-3">
+                  <motion.div className="w-6 h-6 md:w-8 md:h-8 relative">
+                    <img src="/assets/img/logo.png" alt="Saving Secure Logo" className="w-full h-full object-contain" />
+                    <motion.div
+                      className="absolute -bottom-1 -right-1 w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [1, 0.8, 1]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
                     />
+                  </motion.div>
+                  <div>
+                    <h3 className="text-gray-900 font-semibold text-sm md:text-base">Saving Secure</h3>
+                    <p className="text-yellow-400 text-xs font-medium">Asesor Financiero Virtual</p>
                   </div>
+                </div>
+                <motion.button
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-full"
+                  whileHover={{ rotate: 90 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <X size={20} />
                 </motion.button>
               </div>
-            </form>
+
+              {/* Chat messages area with particles */}
+              <div className="flex-1 relative">
+                {/* Particles background */}
+                <div className="absolute inset-0" style={{ zIndex: 1 }}>
+                  <ChatBotParticles />
+                </div>
+                
+                {/* Messages overlay */}
+                <div
+                  ref={chatContentRef}
+                  className="relative h-full overflow-y-auto p-2 md:p-4 space-y-2 md:space-y-4 bg-transparent"
+                  style={{ zIndex: 2 }}
+                >
+                  {messages.map((message, index) => (
+                    <motion.div
+                      key={index}
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                      variants={messageVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                    >
+                      <div
+                        className={`max-w-[85%] p-2 md:p-3 text-sm md:text-base rounded-2xl ${
+                          message.type === 'user'
+                            ? 'bg-[#fecd02] text-gray-900'
+                            : 'bg-[rgb(31,32,41)] text-white'
+                        } relative`}
+                        style={{ zIndex: 3 }}
+                      >
+                        {message.content}
+                      </div>
+                    </motion.div>
+                  ))}
+                  {isTyping && (
+                    <div className="flex justify-start" style={{ zIndex: 3 }}>
+                      <div className="bg-[#1E1E1E] p-4 rounded-2xl">
+                        <div className="flex space-x-2">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  <div ref={messagesEndRef} />
+                </div>
+              </div>
+
+              {/* Input form */}
+              <form onSubmit={handleSubmit} className="p-2 md:p-4 border-t bg-white/70">
+                <div className="relative flex items-center">
+                  {/* Campo de entrada con efecto neomórfico */}
+                  <div className="relative flex-1 mr-2">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#fecd02]/20 to-yellow-500/20 rounded-xl blur-md transform scale-105" />
+                    <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-xl shadow-inner" />
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      placeholder="Escriba su mensaje..."
+                      className="relative w-full bg-transparent text-gray-900 rounded-xl px-3 md:px-6 py-2 md:py-4 focus:outline-none placeholder:text-gray-400 text-sm md:text-base"
+                    />
+                    
+                    {/* Efecto de onda al escribir */}
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#fecd02] via-yellow-500 to-[#fecd02]"
+                      initial={{ scaleX: 0 }}
+                      animate={{ 
+                        scaleX: inputValue ? [0, 1, 1] : 0,
+                        x: inputValue ? ['0%', '100%', '0%'] : '0%'
+                      }}
+                      transition={{ 
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
+                  </div>
+
+                  {/* Botón de enviar */}
+                  <motion.button
+                    type="submit"
+                    disabled={!inputValue.trim()}
+                    className="relative group"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <div className={`
+                      relative p-3 rounded-full
+                      ${!inputValue.trim()
+                        ? 'bg-gray-100'
+                        : 'bg-gradient-to-r from-[#fecd02] to-[#fecd02] shadow-md'
+                      }
+                      transition-all duration-300
+                    `}>
+                      <Send
+                        size={22}
+                        className={`transition-all duration-300 ${
+                          inputValue.trim()
+                            ? 'text-white stroke-[2]'
+                            : 'text-gray-400'
+                        }`}
+                      />
+                    </div>
+                  </motion.button>
+                </div>
+              </form>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

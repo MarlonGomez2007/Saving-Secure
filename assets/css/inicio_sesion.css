@@ -544,27 +544,50 @@ form.sign-in-form {
 }
 
 .btn-volver {
-  background: #f0b700;
+  display: inline-block; /* Show by default */
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #f0b700;
   color: #23232b;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 22px;
+  border-radius: 25px;
   font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  margin-left: 10px;
-  cursor: pointer;
-  outline: none;
-  display: flex;
-  align-items: center;
-  height: 40px;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
+
 .btn-volver:hover {
-  background: #ffd700;
-  color: #111;
-  text-decoration: none;
+  background-color: #ffd700;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(240, 183, 0, 0.3);
+}
+
+.texto-mobile {
+  display: none;
+}
+
+.texto-desktop {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .texto-mobile {
+    display: inline-block;
+    font-size: 0.9rem;
+  }
+  
+  .texto-desktop {
+    display: none;
+  }
+
+  .btn-volver {
+    padding: 8px 16px;
+    margin-left: -10px;
+    transform: scale(0.95);
+  }
+
+  .btn-volver:hover {
+    transform: translateY(-2px) scale(0.95);
+  }
 }
 
 /* Íconos sociales */

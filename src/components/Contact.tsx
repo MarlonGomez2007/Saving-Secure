@@ -64,17 +64,17 @@ const Contact = () => {
         </div>
 
         {/* Opinion Section */}
-        <div className="mb-16">
-          <div className="bg-gray-800/30 rounded-2xl p-8 max-w-3xl mx-auto">
+        <div className="mb-8 sm:mb-16">
+          <div className="bg-gray-800/30 rounded-2xl p-4 sm:p-8 max-w-3xl mx-auto">
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h2 className="text-4xl font-bold mb-6 text-[#fecd02]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-6 text-[#fecd02]">
                 TU OPINIÓN
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-lg sm:text-xl text-gray-300 mb-4 sm:mb-8">
                 ¿Qué te ha parecido nuestra plataforma?
               </p>
               
-              <div className="flex justify-center space-x-6">
+              <div className="flex justify-center space-x-1 xs:space-x-2 sm:space-x-4 md:space-x-6">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
                     key={star}
@@ -84,7 +84,7 @@ const Contact = () => {
                     onMouseLeave={() => setHoveredRating(0)}
                   >
                     <svg
-                      className={`w-14 h-14 transition-colors duration-300 ${
+                      className={`w-5 h-5 xs:w-6 xs:h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 transition-colors duration-300 ${
                         star <= (hoveredRating || rating) ? 'text-[#fecd02]' : 'text-gray-600'
                       }`}
                       fill="currentColor"
@@ -99,7 +99,7 @@ const Contact = () => {
               </div>
               
               {rating > 0 && (
-                <p className="mt-6 text-xl text-[#fecd02] font-semibold animate-fade-in-up">
+                <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-[#fecd02] font-semibold animate-fade-in-up">
                   ¡Gracias por tu valoración!
                 </p>
               )}

@@ -9,6 +9,7 @@ import FooterSection from '../components/FooterSection';
 import LoadingScreen from '../components/LoadingScreen';
 import ChatBot from '../components/ChatBot';
 import SplineRobot from '../components/SplineRobot';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -66,6 +67,7 @@ const Index = () => {
             </div>
 
             <ChatBot />
+            <ScrollToTop />
           </motion.div>
         )}
       </AnimatePresence>

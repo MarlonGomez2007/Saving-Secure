@@ -59,7 +59,7 @@ const HeroSection = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[rgba(31,32,41,1)] via-[rgba(31,32,41,0.98)] to-[rgba(31,32,41,1)]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[rgba(31,32,41,1)] via-[rgba(31,32,41,0.98)] to-[rgba(31,32,41,1)] pt-20 md:pt-24"
     >
       {/* Fondo 3D */}
       <Scene3D />

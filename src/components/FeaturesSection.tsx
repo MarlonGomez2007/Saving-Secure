@@ -39,35 +39,8 @@ const FeaturesSection = () => {
       description: "Soluciones empresariales completas para gestión financiera avanzada con reportes y análisis.",
       icon: Building,
       benefits: ["Gestión de flujo de caja", "Reportes avanzados", "Facturación digital", "Control de inventarios"]
-    },
-    {
-      id: 'health' as const,
-      title: "Gastos de Salud",
-      description: "Controla y planifica todos tus gastos médicos y de salud de manera organizada.",
-      icon: Heart,
-      benefits: ["Seguimiento médico", "Gastos farmacéuticos", "Seguros de salud", "Presupuesto preventivo"]
-    },
-    {
-      id: 'education' as const,
-      title: "Educación",
-      description: "Planifica y gestiona los gastos educativos para ti o tu familia a largo plazo.",
-      icon: GraduationCap,
-      benefits: ["Matrícula universitaria", "Cursos especializados", "Material académico", "Ahorro educativo"]
-    },
-    {
-      id: 'travel' as const,
-      title: "Viajes",
-      description: "Organiza y controla todos los gastos de tus viajes desde la planificación hasta el regreso.",
-      icon: Plane,
-      benefits: ["Presupuesto de viaje", "Gastos por destino", "Moneda extranjera", "Reservas y actividades"]
-    },
-    {
-      id: 'investment' as const,
-      title: "Inversiones",
-      description: "Gestiona tu portafolio de inversiones y realiza seguimiento de tus activos financieros.",
-      icon: TrendingDown,
-      benefits: ["Portfolio tracking", "Análisis de ROI", "Diversificación", "Rebalanceo automático"]
     }
+    
   ];
 
   const containerVariants = {

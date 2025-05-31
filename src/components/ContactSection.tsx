@@ -157,7 +157,7 @@ const ContactSection = () => {
                   </p>
                 </motion.div>
                 
-                <div className="flex justify-center items-center space-x-8">
+                <div className="flex justify-center items-center space-x-2 sm:space-x-4 md:space-x-8">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <motion.button
                       key={star}
@@ -182,7 +182,7 @@ const ContactSection = () => {
                       }`}></div>
                       
                       <svg
-                        className={`w-16 h-16 transition-all duration-300 ${
+                        className={`w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 transition-all duration-300 ${
                           star <= (hoveredRating || rating) 
                             ? 'text-[#fecd02] drop-shadow-[0_0_8px_rgba(254,205,2,0.5)]' 
                             : 'text-gray-600'
